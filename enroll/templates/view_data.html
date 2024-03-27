@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Data</title>
+</head>
+<body>
+    <h1>Data View</h1>
+    {% if user_data %}
+        <ul>
+            {% for item in user_data %}
+                <li>{{ item.field_name }}</li> <!-- यहाँ field_name को अपने वास्तविक फ़ील्ड का नाम स्थानांतरित करें -->
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No data available</p>
+    {% endif %}
+</body>
+</html>

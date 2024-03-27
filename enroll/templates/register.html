@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        <label for="id_username">Username:</label><br>
+        {{ form.username }}
+        <br>
+        <label for="id_password1">Password:</label><br>
+        {{ form.password1 }}
+        <br>
+        <label for="id_password2">Confirm Password:</label><br>
+        {{ form.password2 }}
+        <br><br>
+        <button type="submit">Register</button>
+        
+    </form>
+    <a href="{% url 'login' %}"><button>login</button></a>
+
+</body>
+</html> -->
+
+
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
